@@ -14,10 +14,8 @@ public class MainActivity extends FragmentActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mTabHost = (FragmentTabHost)findViewById(android.R.id.tabhost);
         mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
-
         mTabHost.addTab(mTabHost.newTabSpec("tab1").setIndicator("Tab1"),
                 Tab1Fragment.class, null);
         mTabHost.addTab(mTabHost.newTabSpec("tab2").setIndicator("Tab2"),
@@ -30,6 +28,8 @@ public class MainActivity extends FragmentActivity {
 
         mTabHost.addTab(mTabHost.newTabSpec("tab5").setIndicator("Tab5"),
                 Tab5Fragment.class, null);
+
+        
     }
 }
 
